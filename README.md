@@ -25,7 +25,7 @@ marketManager.market('BTC-ETH', (err, ethereum) => {
     //all fills from the past get replayed
     ethereum.on('fills', console.log)
 
-    //fires each time changes have been applied to the orderbook
+    //fires each time changes have been applied to the orderbook, and prints the current state of the orderbook
     ethereum.on('orderbookUpdated', () => {
         //print the asks side of the current order book state
         //the format is an array of [ rate, quantity ]
@@ -34,6 +34,18 @@ marketManager.market('BTC-ETH', (err, ethereum) => {
 
         //same thing for the bids side
         console.log(ethereum.bids)
+    })
+
+    //fires each time changes have been applied to the orderbook, and prints the changes only
+    sides = ['asks', 'bids']
+    eventTypes = ['removed', 'inserted', 'updated']
+
+    sides.forEach((side) => {
+        eventTypes.forEach((type) => {
+            bitcoin.on(`orderbook.diff.${side}.${type}`, (event) => {
+                console.log(side, type, event)
+            })
+        })
     })
 })
 ```
