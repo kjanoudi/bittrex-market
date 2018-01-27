@@ -1,5 +1,5 @@
 {
-  "name": "bittrex-market",
+  "name": "kjanoudi-bittrex-market",
   "version": "2.2.0",
   "description": "Subscribe to the orderbook and market events on the Bittrex exchange",
   "main": "index.js",
@@ -17,6 +17,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:gliwka/bittrex-market.git"
+    "url": "git@github.com:kjanoudi/bittrex-market.git"
   }
 }
