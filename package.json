@@ -1,6 +1,6 @@
 {
   "name": "bittrex-market",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "Subscribe to the orderbook and market events on the Bittrex exchange",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Matthias Gliwka <mg@cerebuild.com>",
   "license": "MIT",
   "dependencies": {
-    "cloudscraper": "^1.4.1",
+    "cloudscraper": "^1.5.0",
     "emitter-queue": "^1.0.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
